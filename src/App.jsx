@@ -52,7 +52,7 @@ function App() {
     e.preventDefault();
     const values = featureOrder.map((key) => parseFloat(inputs[key]));
     try {
-      const res = await fetch("http://127.0.0.1:5000/predict", {
+      const res = await fetch("https://breast-cancer-predictor-backend.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ features: values })
